@@ -1,0 +1,960 @@
+/* CSS variables */
+
+:root {
+    --navy: #172539;
+    --brown: #bf9570;
+    --cream: #f5efe7;
+}
+
+/* General styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #263142;
+    background-color: var(--cream);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #85512b;
+    text-decoration: none;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #91603a;
+    outline-offset: 3px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.soft-section {
+    background-color: #eee4d8;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+    color: #91603a;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Header and navigation */
+
+header {
+    color: white;
+    background-color: var(--navy);
+    border-bottom: 1px solid #3c4858;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--brown);
+}
+
+.logo:hover {
+    color: #dfb58d;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 6px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #dfb58d;
+}
+
+.nav-links a.active {
+    color: #dfb58d;
+    font-weight: 700;
+}
+
+/* Buttons */
+
+.main-button,
+.outline-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    transition: none;
+}
+
+.main-button {
+    color: #172539;
+    background-color: var(--brown);
+    border: 1px solid #bf9570;
+}
+
+.main-button:hover {
+    color: #172539;
+    background-color: #cda780;
+    border-color: #cda780;
+}
+
+.main-button:focus {
+    color: #172539;
+    background-color: var(--brown);
+    border-color: #91603a;
+    box-shadow: none;
+}
+
+.outline-button {
+    color: #172539;
+    background-color: transparent;
+    border: 1px solid #172539;
+}
+
+.outline-button:hover,
+.outline-button:focus {
+    color: #172539;
+    background-color: #e8dbcb;
+    border-color: #172539;
+    box-shadow: none;
+}
+
+.text-link {
+    display: inline-block;
+    color: #85512b;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: #172539;
+}
+
+/* Home page */
+
+.hero {
+    padding: 60px 0;
+    color: white;
+    background-color: var(--navy);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content > div {
+    min-width: 0;
+}
+
+.hero .subtitle {
+    color: #dfb58d;
+}
+
+.hero h1 span {
+    color: #d3aa83;
+}
+
+.hero-text {
+    max-width: 450px;
+    margin: 25px 0;
+    color: #c6ced8;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.hero-link {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-link:hover {
+    color: #dfb58d;
+}
+
+.hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #3c4858;
+}
+
+.hero-facts strong,
+.hero-facts span {
+    display: block;
+}
+
+.hero-facts strong {
+    font-size: 20px;
+}
+
+.hero-facts span {
+    color: #c6ced8;
+    font-size: 14px;
+}
+
+/* Image positioning */
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 4px;
+}
+
+.image-label {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    padding: 18px;
+    background-color: #172539;
+    border-left: 3px solid #bf9570;
+}
+
+.image-label strong,
+.image-label span {
+    display: block;
+}
+
+.image-label span {
+    margin-top: 5px;
+    color: #c6ced8;
+    font-size: 14px;
+}
+
+/* Information cards */
+
+.feature-card {
+    height: 100%;
+    padding: 25px;
+    background-color: #fffcf8;
+    border: 1px solid #ded4c8;
+    border-radius: 4px;
+}
+
+.feature-card p:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    display: block;
+    margin-bottom: 15px;
+    color: #91603a;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Featured apartment */
+
+.featured-image {
+    position: relative;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+
+.featured-price {
+    margin-bottom: 25px;
+    color: #626a73;
+}
+
+.featured-price strong {
+    color: #172539;
+    font-size: 25px;
+}
+
+/* Frequently asked questions */
+
+.faq-list {
+    margin-bottom: 25px;
+    border-top: 1px solid #cdbfae;
+}
+
+.faq-list details {
+    padding: 20px 0;
+    border-bottom: 1px solid #cdbfae;
+}
+
+.faq-list summary {
+    color: #172539;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.faq-list summary:hover {
+    color: #85512b;
+}
+
+.faq-list summary:focus {
+    outline: 2px solid #91603a;
+    outline-offset: 3px;
+}
+
+.faq-list details p {
+    margin: 15px 0 0;
+    color: #4e5864;
+}
+
+/* Banner */
+
+.banner {
+    padding: 50px 0;
+    background-color: #e8dbcb;
+}
+
+.banner p {
+    max-width: 620px;
+    margin: 18px auto 25px;
+}
+
+/* Page headings */
+
+.page-heading {
+    padding: 50px 0;
+    color: white;
+    background-color: var(--navy);
+}
+
+.page-heading h1 {
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.page-heading .subtitle {
+    color: #dfb58d;
+}
+
+.page-heading p:last-child {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: #c6ced8;
+}
+
+/* Apartment cards */
+
+.apartment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 25px;
+}
+
+.apartment-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background-color: #fffcf8;
+    border: 1px solid #ded4c8;
+    border-radius: 4px;
+    scroll-margin-top: 25px;
+}
+
+.card-image {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 240px;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    background-color: #f5efe7;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 22px;
+}
+
+.card-info h2 {
+    font-size: 25px;
+}
+
+.location {
+    color: #626a73;
+    font-size: 14px;
+}
+
+.apartment-details {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    color: #4e5864;
+}
+
+.apartment-details li {
+    margin-bottom: 6px;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #ded4c8;
+}
+
+.apartment-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.apartment-price strong {
+    color: #172539;
+    font-size: 22px;
+}
+
+.apartment-price span {
+    color: #626a73;
+    font-size: 14px;
+}
+
+.card-bottom .main-button {
+    width: 100%;
+    font-size: 15px;
+}
+
+/* Lists and notices */
+
+.simple-list {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+.simple-list li {
+    margin-top: 10px;
+}
+
+.notice {
+    padding: 16px;
+    background-color: #e9dfd2;
+    border-left: 3px solid #91603a;
+    font-size: 15px;
+}
+
+/* Price table */
+
+.price-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background-color: #fffcf8;
+}
+
+.price-table caption {
+    caption-side: top;
+    margin-bottom: 12px;
+    color: #626a73;
+}
+.price-table th,
+.price-table td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #ded4c8;
+}
+
+.price-table thead {
+    color: white;
+    background-color: var(--navy);
+}
+
+.price-table tbody tr:nth-child(even) {
+    background-color: #e9dfd2;
+}
+
+/* Budget example */
+
+.budget-box {
+    padding: 25px;
+    background-color: #fffcf8;
+    border: 1px solid #ded4c8;
+    border-radius: 4px;
+}
+
+.budget-box h3 {
+    margin-bottom: 20px;
+}
+
+.budget-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ded4c8;
+}
+
+.budget-total {
+    color: #172539;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* About page */
+
+.about-image {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+
+/* Contact page */
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-note {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+.contact-form {
+    padding: 24px;
+    background-color: #fffcf8;
+    border: 1px solid #cfc5b9;
+    border-radius: 3px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    padding: 9px 12px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: none;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: #91603a;
+    outline: 2px solid #bf9570;
+    outline-offset: 1px;
+    box-shadow: none;
+}
+
+.contact-form .main-button {
+    width: auto;
+}
+
+/* ID selectors */
+
+#request {
+    scroll-margin-top: 25px;
+}
+
+#demo {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+#demo:target {
+    outline: 2px solid #91603a;
+    outline-offset: 5px;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 40px;
+    color: #c6ced8;
+    background-color: #111d2d;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 30px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+footer a {
+    display: block;
+    margin-bottom: 8px;
+    color: #c6ced8;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+footer a:hover {
+    color: #dfb58d;
+}
+
+footer small {
+    display: block;
+    font-size: 13px;
+}
+
+.copyright {
+    margin: 30px 0 0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #3c4858;
+    font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .hero-image img {
+        height: 480px;
+    }
+
+    .hero-facts {
+        gap: 20px;
+    }
+
+    .apartment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 8px 18px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 35px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .hero-link {
+        align-self: flex-start;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .image-label {
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 15px;
+    }
+
+    .hero-facts {
+        margin-top: 25px;
+    }
+
+    .page-heading {
+        padding: 35px 0;
+    }
+.apartment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image img,
+    .about-image {
+        height: 300px;
+    }
+
+    .feature-card,
+    .budget-box {
+        padding: 20px;
+    }
+
+    .faq-list summary {
+        font-size: 17px;
+    }
+
+    .banner {
+        padding: 40px 0;
+    }
+
+    .banner .main-button,
+    .section-actions .outline-button {
+        width: 100%;
+    }
+
+    .contact-section {
+        padding: 35px 0;
+    }
+
+    .contact-form {
+        padding: 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+/* Endterm features */
+
+[hidden] {
+    display: none !important;
+}
+
+.gallery-photo {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.gallery-photo:focus-visible {
+    outline-offset: -4px;
+}
+
+.card-image .tag {
+    pointer-events: none;
+}
+
+#lightbox {
+    width: min(900px, 94vw);
+    max-height: 92vh;
+    padding: 16px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--navy);
+    color: white;
+}
+
+#lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.78);
+}
+
+#large-photo {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+.password-strength {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.contact-form .is-invalid {
+    border-color: #b02a37;
+}
+
+.contact-form .is-valid {
+    border-color: #146c43;
+}
+
+.strength-track {
+    height: 8px;
+    margin-top: 8px;
+    background: #e9ecef;
+}
+
+.strength-track .progress-bar {
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form .valid-feedback {
+    color: #146c43;
+    font-weight: 500;
+}
+
+.field-ok-message,
+.field-error-message {
+    display: block;
+}
