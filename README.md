@@ -42,7 +42,7 @@ Open `index.html` in a browser, or serve the folder with VS Code Live Server. To
 ## Project links
 
 - Published website: **ADD YOUR GITHUB PAGES / NETLIFY LINK HERE**
-- GitHub repository: **ADD YOUR GITHUB REPOSITORY LINK HERE**
+- GitHub repository: **(https://github.com/akshitkhokher2007/webendterm.git)**
 
 ## Content and image credits
 
